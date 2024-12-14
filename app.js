@@ -13,7 +13,7 @@ async function fetchData() {
   }
 }
 
-
+Colleges
 function populateTable(records) {
   const tableBody = document.getElementById("studentTable").querySelector("tbody");
   tableBody.innerHTML = ""; // Clear any existing data
@@ -21,9 +21,11 @@ function populateTable(records) {
   records.forEach(record => {
     const row = document.createElement("tr");
     row.innerHTML = `
-      <td>${record.fields.nationality || "Unknown"}</td>
-      <td>${record.fields.gender || "Unknown"}</td>
-      <td>${record.fields.enrolled_students || 0}</td>
+      <td>${record.fields.Year || "Unknown"}</td>
+      <td>${record.fields.the_programs || "Unknown"}</td>
+      <td>${record.fields.Nationality || "Unknown"}</td>
+      <td>${record.fields.Colleges || "Unknown"}</td>
+      <td>${record.fields.Number_of_students || 0}</td>
     `;
     tableBody.appendChild(row);
   });
